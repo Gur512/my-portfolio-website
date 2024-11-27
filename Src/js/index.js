@@ -9,6 +9,8 @@ function listen(event, selector, callback) {
 }
 
 const button = select('.btn');
+const listIcon = select('.menu-toggle');
+const nav = select('nav ul');
 
 if (button) {
     listen('click', button, function() {
@@ -17,3 +19,7 @@ if (button) {
 } else {
     console.error('button not available');
 }
+
+listen ('click', listIcon, () => {
+    nav.classList.toggle('active');
+});
