@@ -73,7 +73,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(../Img/dark-image.jpg);
+    background-image: url(../Img/dark-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -81,20 +81,13 @@ header {
 
 .content {
     display: flex;
-    flex-direction: column;  /* Stacks the children vertically */
-    gap: 30px;  /* Apply a gap between the items inside .content */
+    flex-direction: column;  
+    gap: 30px;
     align-items: center;
-    /* h1 {
-        color: var(--app-white-background);
-        font-weight: 400;
-        font-size: 60px;
-    } */
 
     .typing {
-        /* background-color: #0000ff; */
         color: var(--app-white-background);
         font-weight: 400;
-        /* margin-top: 3em; */
         font-size: 60px;
         border-right: 0.30rem solid #fff;
         box-sizing: content-box;
@@ -102,14 +95,14 @@ header {
         width: 0;
         white-space: nowrap;
         overflow: hidden;
-        animation: typing 3s steps(17,end) forwards !important;
+        animation: typing 3s steps(17,end) forwards !important; 
+        /*I have to use this !important to override the reset style in order to run animation*/
     }
 
     p {
         color: var(--app-white-background);
         font-weight: 600;
         font-size: 17px;
-        /* margin-top: 20px; */
         width: 80rem;
     }
 }
@@ -142,32 +135,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* .circular-outline {
-    position: absolute;
-    width: 320px;
-    height: 320px;
-    border: 5px solid var(--app-blue-background);
-    border-radius: 50%;
-    box-sizing: border-box;
-    z-index: 1;
-} */
-
-.image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 8em; */
-}
-
-.image {
-    display: block;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    /* border: 3px #333; */
-}
-
 .container-main {
     display: flex;
     flex-direction: column;
@@ -176,15 +143,8 @@ button:hover {
     justify-content: center;
 }
 
-h2 {
-    color: var(--app-white-background);
-    font-size: 50px;
-    font-weight: 600;
-    /* margin-top: 25px; */
-}
-
 .contact-section {
-    background-image: url(../Img/contact-image.avif);
+    background-image: url(../Img/background2.avif);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -192,34 +152,30 @@ h2 {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    /* gap: 30px;  */
-    /* padding: 3em 0; */
-    /* box-sizing: border-box; */
     height: 100vh;
-    /* overflow: hidden; */
+}
+
+h2 {
+    color: var(--app-white-background);
+    font-size: 50px;
+    font-weight: 600;
 }
 
 p2 {
     color: var(--app-white-background);
     font-size: 20px;
     font-weight: 500;
-    /* margin-top: 20px; */
 }
 
 .contact-links {
-    margin-top: 3.5em;
+    margin-top: 2em;
     display: flex;
     justify-content: center;
-    gap: 120px;
-    /* display: flex; 
-    gap: 20px; */
-    /* display: inline-block; */
+    gap: 80px;
 }
 
 .contact-links a.btn-1 {
-    /* margin: 0 1em; */
     padding: 10px 20px;
-    /* width: 15rem; */
     background-color: var(--app-blue-background);
     color: var(--app-white-background);
     text-decoration: none;
@@ -227,7 +183,6 @@ p2 {
 }
 
 .contact-links a.btn-2 {
-    /* margin: 0 1em; */
     padding: 10px 20px;
     background-color: var(--app-simpleblue-background);
     color: var(--app-white-background);
@@ -236,7 +191,6 @@ p2 {
 }
 
 .contact-links a.btn-3 {
-    /* margin: 0 1em; */
     padding: 10px 20px;
     background-color: #4A148C;
     color: var(--app-white-background);
@@ -244,24 +198,26 @@ p2 {
     border-radius: 5px;
 }
 
-/* .contact-links a.btn-1:hover {
-    background-color: #555;
+.contact-links a.btn-1:hover {
+    background-color: #3e3e6e;
 }
 
 .contact-links a.btn-2:hover {
-    background-color: #555;
-} */
+    background-color: #256dca;
+} 
+
+.contact-links a.btn-3:hover {
+    background-color: #6f3d97;
+}
 
 .container-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* gap: 30px; */
 }
 
 .about-me {
-    /* background-image: url(../Img/background-04.jpg); */
     background-color: #653780;
     background-size: cover;
     background-repeat: no-repeat;
@@ -273,28 +229,36 @@ p2 {
     color: #fff;
     font-size: 50px;
     font-weight: 700;
-    /* margin-top: 2em; */
 }
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    display: block;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 .about-me p {
     color: #fff;
     font-size: 20px;
     font-weight: 500;
-    /* margin-top: 5em;
-    margin-bottom: 4em; */
     width: 100%;
     max-width: 40em;
     margin-bottom: 15px;
-    /* margin-inline: auto; */
 }
 
 .footer {
-    /* background-color: #cb16f8; */
     background-color: #581772;
     color: #fff;
     text-align: center;
-    /* padding: 20px 0; */
-    /* position: relative; */
     width: 100%;
     font-size: 20px;
 }
@@ -302,16 +266,11 @@ p2 {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    /* flex-direction: column; */
     align-items: center;
     color: #fff;
     font-weight: 500;
     padding: 15px;
 }
-
-/* .social-links {
-    /* margin-top: 25px; */
-/*}*/
 
 .social-links a {
     margin: 0 10px;
@@ -321,9 +280,6 @@ p2 {
     text-decoration: none;
 }
 
-/* .social-links a:hover {
-    transform: scale(1.1);
-} */
 
 @media (min-width: 768px) and (max-width: 1023px) {
     header {
@@ -332,8 +288,25 @@ p2 {
         text-align: center;
     }
 
-    .typing, .content p {
-        font-size: 2.25rem;
+    nav ul {
+        display: flex;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .content {
+        .typing {
+            font-size: 5rem;
+        }
+
+        gap: 20px;
+        p {
+            font-size: 1.5rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
     }
 
     .container-content {
@@ -346,46 +319,80 @@ p2 {
         margin-top: 2rem;
     }
 
-    .contact-section p {
-        font-size: 1.25rem;
+    .contact-main {
+
+        p2 {
+            font-size: 1.25rem;
+        }
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        place-content: center;
+    }
+
+    .contact-links a {
+        margin-left: 18rem;
+        width: 15rem;
+        text-align: center;
     }
 
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
 
-    .content h1, .content p {
-        font-size: 2rem;
-    }
-
-    .container-content {
-        display: flex;
-        flex-direction: column;
-        gap: 5em;
+    .content {
+        gap: 20px;
+        .typing {
+            font-size: 5rem;
+            display: flex;
+            justify-content: center;
+        }
+        p {
+            font-size: 15px;
+            width: 40rem;
+        }
+        button {
+            font-size: 15px;
+        }
     }
 
     header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+       display: flex;
+       flex-wrap: wrap;
+       padding: 0px 10px;
+       overflow: hidden;
+       gap: 0px;
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            /* margin-right: 800rem; */
+        }
     }
 
-    /* nav ul {
+    .contact-section {
+        h2 {
+            font-size: 40px;
+        }
+        p2 {
+            font-size: 2rem;
+            margin: 0px 5px;
+        }
+    }
+
+    .contact-links {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 5em;
-    } */
-
-    .image-wrapper {
-        margin-top: 1rem;
-    }
-
-    .contact-section p {
-        font-size: 2rem;
-    }
-
-    .contact-links a {
-        padding: 8px 16px;
+        gap: 20px;
+        width: 15rem;
+        margin-left: 18rem;
+        justify-content: center;
     }
 }
