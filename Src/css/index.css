@@ -46,7 +46,7 @@ header {
     h1 {
         line-height: 56px;
         font-size: 22px;
-        font-weight: 500;
+        font-weight: 600;
         color: var(--app-white-background);
     }
 
@@ -157,13 +157,13 @@ button:hover {
 
 h2 {
     color: var(--app-white-background);
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
 }
 
 p2 {
     color: var(--app-white-background);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -227,7 +227,7 @@ p2 {
 
 .about-me h2 {
     color: #fff;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -260,7 +260,7 @@ p2 {
     color: #fff;
     text-align: center;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footer-content {
