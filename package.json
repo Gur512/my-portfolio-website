@@ -1,0 +1,19 @@
+{
+  "name": "gurpreet_tools_assignment_04",
+  "version": "1.0.0",
+  "description": "Welcome to my personal portfolio website!",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Gurpreet",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
