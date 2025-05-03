@@ -18,3 +18,14 @@ if (button) {
     console.error('button not available');
 }
 
+const sidebar = select('.sidebar');
+const hideIcon = select('.hidden-icon');
+const menuIcon = select('.menu-button');
+
+listen('click', menuIcon, () => {
+    sidebar.style.display = 'flex';
+});
+
+listen('click', hideIcon, () => {
+    sidebar.style.display = 'none';
+});

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewpoint" content="width=device-width,intial-scale=1">
+        <meta name="viewport" content="width=device-width,intial-scale=1">
         <meta name="author" content="Gurpreet">
         <meta name="description" content="My web page">
         <meta name="Keyword" content="html ,css,web,seo,web development">
@@ -18,6 +18,30 @@
     </head>
     <body>
         <header>
+        <div class="container flex">
+        <div class="title">
+            <h1>Portfolio</h1>
+        </div>
+        <nav>
+            <ul class='sidebar'>
+                <li class='hidden-icon'><a href='#'>&#10006</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul>
+            <!-- <li><a href='#' class="title">Portfolio</a></li> -->
+            <li class='hideOnMobile'><a href="#about">About</a></li>
+            <li class='hideOnMobile'><a href="#skills">Skills</a></li>
+            <li class='hideOnMobile'><a href="#projects">Projects</a></li>
+            <li class='hideOnMobile'><a href="#contact">Contact</a></li>
+            <li class='menu-button'><a href='#'>≡</a></li>
+            </ul>
+        </nav>
+        </div>
+        </header>
+        <!-- <header>
             <div class="container flex">
                 <div class="title">
                     <h1>Portfolio</h1>
@@ -31,7 +55,7 @@
                     </ul>
                 </nav>
             </div>
-        </header>
+        </header> -->
         <main>
             <section>
                 <div class="container-content">
@@ -54,7 +78,7 @@
                     <h2>About me</h2>
                     <div class="image-wrapper"> 
                         <div class="circular-outline"></div> 
-                        <img src="./Src/Img/My-pic.JPG" class="image"> 
+                        <img src="./Src/Img/My-pic.JPG" class="image" alt="Gurpreet kaur"> 
                     </div>
                     <p>
                         I am a passionate <strong>software developer</strong> with a recent diploma from MITT. My focus 
@@ -69,7 +93,7 @@
             <section id="contact" class="contact-section">
                 <div class="container-main">
                   <h2>LET'S CHAT!</h2>
-                  <p2>Reach out today and let's make something great happen!</p>
+                  <p2>Reach out today and let's make something great happen!</p2>
                   <div class="contact-links">
                     <a href="https://github.com/Gur512" target="_blank" class="btn-1">
                         <i class="fab fa-github"></i>

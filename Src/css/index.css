@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --app-dark-background: #1a1d28;
     --app-blue-background: #1a2451;
@@ -10,17 +16,19 @@
 }
 
 body {
+    min-height: 100vh;
     background-color: var(--app-dark-background);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.3s ease-in-out;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
     width: min(100% - 32px, 1080px);
     margin-inline: auto;
     display: flex;
-    gap: 50em;
     align-items: center;
 }
 
@@ -28,37 +36,119 @@ body {
     display: flex;
 }
 
-header {
-    background-color: #cb16f8;
-    div, nav {
-        height: 56px;
-    }
-    
-    nav ul {
-        display: flex;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
-        justify-content: flex-start;
-        padding-left: 0;
-    }
-
-    h1 {
-        line-height: 56px;
-        font-size: 22px;
-        font-weight: 600;
-        color: var(--app-white-background);
-    }
-
-    nav li a {
-        line-height: 56px;
-        font-size: 17px;
-        font-weight: 600;
-        color: var(--app-white-background);
-        text-decoration: none;
-    }
+.title {
+    color: #fff;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #cb16f8; /* transparent dark */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    background-color: transparent;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    /* margin: 0;
+    padding: 0; */
+    /* width: 100%; */
+}
+
+nav li {
+    height: 56px;
+}
+
+nav li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: var(--app-white-background);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 60px;
+    z-index: 20;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+    padding: 15px 20px;
+    color: var(--app-white-background);
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.menu-button {
+    display: none;
+    background: none;
+    color: var(--app-white-background);
+    /* font-size: 50px; */
+    cursor: pointer;
+    margin-left: auto;
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+}
 
 .section {
     padding: 3em 0;
@@ -68,7 +158,7 @@ header {
 .container-content {
     width: min(100% - 32px, 1080px);
     margin-inline: auto;
-    display: flex; 
+    display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -81,7 +171,7 @@ header {
 
 .content {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     gap: 30px;
     align-items: center;
 
@@ -95,8 +185,7 @@ header {
         width: 0;
         white-space: nowrap;
         overflow: hidden;
-        animation: typing 3s steps(17,end) forwards !important; 
-        /*I have to use this !important to override the reset style in order to run animation*/
+        animation: typing 3s steps(17,end) forwards !important;
     }
 
     p {
@@ -152,7 +241,7 @@ button:hover {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h2 {
@@ -204,7 +293,7 @@ p2 {
 
 .contact-links a.btn-2:hover {
     background-color: #256dca;
-} 
+}
 
 .contact-links a.btn-3:hover {
     background-color: #6f3d97;
@@ -222,7 +311,7 @@ p2 {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    padding: 5em 2em; 
+    padding: 5em 2em;
 }
 
 .about-me h2 {
@@ -244,7 +333,6 @@ p2 {
     border-radius: 50%;
     object-fit: cover;
 }
-
 
 .about-me p {
     color: #fff;
@@ -280,119 +368,74 @@ p2 {
     text-decoration: none;
 }
 
-
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Mobile Media Queries */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
         text-align: center;
+        padding: 10px;
     }
 
     nav ul {
         display: flex;
-        box-sizing: border-box;
+        flex-direction: column;
         gap: 10px;
     }
 
     .content {
+        gap: 15px;
         .typing {
-            font-size: 5rem;
-        }
-
-        gap: 20px;
-        p {
-            font-size: 1.5rem;
-        }
-
-        button {
-            font-size: 1.5rem;
-        }
-    }
-
-    .container-content {
-        display: flex;
-        flex-direction: column;
-        gap: 5em;
-    }
-
-    .image-wrapper {
-        margin-top: 2rem;
-    }
-
-    .contact-main {
-
-        p2 {
-            font-size: 1.25rem;
-        }
-    }
-
-    .contact-links {
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        place-content: center;
-    }
-
-    .contact-links a {
-        margin-left: 18rem;
-        width: 15rem;
-        text-align: center;
-    }
-
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-
-    .content {
-        gap: 20px;
-        .typing {
-            font-size: 5rem;
-            display: flex;
-            justify-content: center;
-        }
-        p {
-            font-size: 15px;
-            width: 40rem;
-        }
-        button {
-            font-size: 15px;
-        }
-    }
-
-    header {
-       display: flex;
-       flex-wrap: wrap;
-       padding: 0px 10px;
-       overflow: hidden;
-       gap: 0px;
-
-        nav ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
+            font-size: 45px;
             width: 100%;
-            /* margin-right: 800rem; */
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            width: 90%;
+            max-width: 100%;
+        }
+
+        button {
+            font-size: 16px;
         }
     }
 
     .contact-section {
+        margin-bottom: 50rem;
+
         h2 {
-            font-size: 40px;
+            font-size: 30px;
         }
-        p2 {
+
+        /* p2 {
             font-size: 2rem;
-            margin: 0px 5px;
+        } */
+
+        .contact-links {
+            flex-direction: column;
+            gap: 15px;
+            width: 50%;
+            align-items: center;
+        }
+
+        .contact-links a {
+            width: 80%;
+            text-align: center;
         }
     }
 
-    .contact-links {
-        display: flex;
+    .about-me {
+        padding: 4em 2em;
+    }
+
+    .about-me h2 {
+        font-size: 30px;
+    }
+
+    .footer-content {
         flex-direction: column;
-        gap: 20px;
-        width: 15rem;
-        margin-left: 18rem;
-        justify-content: center;
+        align-items: center;
+        height: auto;
     }
 }
