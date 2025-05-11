@@ -91,11 +91,22 @@ nav li a {
     font-size: 17px;
     font-weight: 600;
     transition: background-color 0.3s;
+    position: relative;
 }
 
-nav li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+nav li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #b169cb;
+    position: absolute;
+    left: 0;
+    bottom: -0px;
+    transition: 0.5s;
+}
+
+nav li a:hover::after {
+    width: 100%;
 }
 
 .sidebar {
