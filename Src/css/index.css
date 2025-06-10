@@ -807,3 +807,43 @@ p {
   box-shadow: 0 0 5px var(--btn-base-dark);
   transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.50rem;
+        padding: 0 1rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .contact-links a[class^="btn-"] {
+        width: 80%;
+        text-align: center;
+        padding: 12px;
+        font-size: 1.50rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.50rem;
+    }
+
+    .contact-links a[class^="btn-"] {
+        width: 90%;
+        font-size: 1.50rem;
+    }
+}
