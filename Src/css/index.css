@@ -210,8 +210,8 @@ nav li a:hover::after {
 
     p {
         color: var(--app-white-background);
-        font-weight: 600;
-        font-size: 17px;
+        font-weight: 400;
+        font-size: 18px;
         width: 80rem;
     }
 }
@@ -285,11 +285,11 @@ button:hover {
     text-align: center;
 }
 
-.our-product .card-item:nth-child(5) {
+/* .our-product .card-item:nth-child(5) {
   grid-column: 1 / -1;
   justify-self: center;
   max-width: 50%;
-}
+} */
 
 .project-section .card-item {
     background-color: rgba(255, 255, 255, 0.1);
@@ -442,7 +442,6 @@ button:hover {
 
     .content {
         gap: 15px;
-        padding: 4em 2em;
         min-height: auto;
         justify-content: flex-start;
         .typing {
@@ -558,7 +557,7 @@ button:hover {
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px #f667cd66;
+    box-shadow: 0 0 10px #f667cd66;
 }
 
 .timeline-content h3 {
@@ -594,6 +593,11 @@ button:hover {
 }
 
 .skills-title {
+   color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+}
+/* .skills-title {
     font-size: 3rem;
     margin-bottom: 2rem;
     background: linear-gradient(90deg, #da45fb, #f667cd, #5cf2de);
@@ -603,7 +607,7 @@ button:hover {
     color: transparent;                   
     letter-spacing: 2px;
     font-weight: 700;
-}
+} */
 
 .skills-grid {
     display: flex;
@@ -631,8 +635,8 @@ button:hover {
 
 .skill-bubble:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #5cf2decc;
-    background: radial-gradient(circle at 20% 20%, #f667cd80, #1a1d28);
+    /* box-shadow: 0 0 10px #5cf2decc; */
+    background: radial-gradient(circle at 5% 5%, #f667cd80, #1a1d28);
 }
 
 .skill-name {
@@ -646,7 +650,7 @@ button:hover {
 
 .soft-skills {
     margin-top: 3rem;
-    max-width: 500px;
+    width: 22rem;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(255, 255, 255, 0.05);
@@ -724,7 +728,8 @@ button:hover {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: 80vh;
 }
 
 h2 {
