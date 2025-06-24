@@ -5,13 +5,13 @@ Welcome to my personal portfolio website! This website showcases my work as a **
 
 ## :computer: About Me 
 
-Hi! I'm **Gurpreet**, a passionate software developer. I recently graduated with a diploma in Software Development from **MITT**. I specialize in building efficient, user-friendly web applications using modern technologies like **JavaScript**, **HTML**, and **CSS**. 
+Hi! I'm **Gurpreet**, a passionate software developer. I recently graduated with a diploma in Software Development from **MITT**. I specialize in building efficient, user-friendly web applications using modern technologies like **JavaScript**, **HTML**, **React** and **CSS**. 
 
 I thrive in environments that challenge my problem-solving skills, and I'm always eager to learn and explore new technologies. Whether it's coding or creating innovative solutions, I'm excited about making a positive impact through technology.
 
 ## 🧠 Languages Which I Know:
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: C#, ASP.NET MVC, SQL  
+- **Frontend**: HTML, CSS, JavaScript, React  
+- **Backend**: C#, ASP.NET MVC, SQL, php  
 - **Database**: SQL Server, MySQL  
 - **Version Control**: Git, GitHub
 
